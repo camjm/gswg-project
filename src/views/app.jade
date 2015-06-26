@@ -1,0 +1,12 @@
+doctype html
+html
+	head
+		//- put style links in the header so browsers load the stylesheets first, so the page is styled correctly as it loads
+		link(rel="stylesheet", href="css/app.css")
+	body
+		include app/header
+		include app/content
+		include app/footer
+
+		//- put script links at the end so they will load after the stylesheets
+		script(src="js/app.js")
