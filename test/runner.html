@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+
+    <script>
+        mocha.setup('bdd');
+        mocha.reporter('html');
+    </script>
+
+    <!-- Tests -->
+    <script src="array-tests.js"></script>
+
+    <script>
+        // Run now if in the browser
+        if (navigator.userAgent.indexOf('PhantomJS') === -1) {
+            mocha.run();
+        }
+    </script>
+</body>
+</html>

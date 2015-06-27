@@ -11,6 +11,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-mocha');
 	grunt.loadNpmTasks('grunt-aws');
 
 	// Project configuration
@@ -52,7 +53,7 @@ module.exports = function(grunt) {
 			compress: {
 				src: "<%= coffee.build.dest %>",
 				dest: "<%= coffee.build.dest %>"
-			},
+			}
 		},
 		cssmin: {
 			compress: {
@@ -87,6 +88,15 @@ module.exports = function(grunt) {
 			views: {
 				files: "src/views/**/*.jade",
 				tasks: "views"
+			}
+		},
+		// Testing
+		mocha: {
+			test: {
+				options: {
+					run: true
+				},
+				src: "test/runner.html"
 			}
 		},
 		// Deploy
