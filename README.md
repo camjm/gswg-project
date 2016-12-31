@@ -26,9 +26,9 @@ npm install --save-dev grunt-contrib-coffee grunt-contrib-jade grunt-contrib-sty
 
 Help to mangage the complexity of the application. Files can be split up and organised logically. Provide minimalist syntax and cleaner code.
 
-CoffeeScript (alternatives: TypeScript, Dart)
-Stylus (alternatives: Sass, LESS)
-Jade (alternatives: Haml, EJS)
+- CoffeeScript (alternatives: TypeScript, Dart)
+- Stylus (alternatives: Sass, LESS)
+- Jade (alternatives: Haml, EJS)
 
 Programs that perform transcompilation are called preprocessors. The grunt tasks are just thin wrappers around a preprocessor.
 
@@ -36,9 +36,9 @@ Programs that perform transcompilation are called preprocessors. The grunt tasks
 ## Source Files
 
 Three subdirectories (with language agnostic names):
-	-scripts
-	-styles
-	-views
+- scripts
+- styles
+- views
 
 ## Build Files
 
